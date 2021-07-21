@@ -1,0 +1,8 @@
+Download AWS CLI from internect
+generate Access key from ..IAM CREATE ACCESS KEY
+Configure AWS
+provide key_id
+provide secret_key
+provide zone
+
+aws cloudformation create-stack --stack-name DynamoDbStackDemo --template-body file://C:/Users/sufal.ghosh/Downloads/mCart/aws_assignments/createTableDynamoDB.yml --region us-east-1 --profile default

@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Dynamo DB Template Demo
+
+Resources:
+  CustomerInformationTable:
+    Type: "AWS::DynamoDB::Table"
+    Properties:
+      TableName: "CustomerInformationTable_dev"
+      AttributeDefinitions:
+        - AttributeName: "CustomerID"
+          AttributeType: "N"
+        - AttributeName: "DOB"
+          AttributeType: "S"      
+      KeySchema:
+        - AttributeName: "CustomerID"
+          KeyType: "HASH"
+        - AttributeName: "DOB"
+          KeyType: "RANGE"     
+      ProvisionedThroughput:
+        ReadCapacityUnits: 10
+        WriteCapacityUnits: 10
+      
+
+
+        
+
